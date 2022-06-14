@@ -1,0 +1,86 @@
+body {
+    margin: 0px;
+}
+#navBar {
+    background-color: black;
+    height: auto;
+    width: auto;
+    
+}
+#navIcons {
+    display: flex;
+    justify-content: flex-end;
+}
+#navBar2 {
+    background-color: black;
+    height: auto;
+    width: auto;
+    display: flex;
+}
+#navBar2 a {
+    color: white;
+}
+#primaryBackground {
+    background-image: url(./imgs/da-section-bg-map-texture.jpg);
+}
+#s1Background {
+    background-image: url(./imgs/dragon_age_background.jpg);
+    width: 175%;
+    height: 200%;
+    
+    
+}
+
+#HmpgTitleLogo {
+    display: flex;
+    justify-content: center;
+    
+}
+#s1ButtonsContainer {
+    height: 200px;
+    position: relative;
+    border: 3px solid white;
+}
+
+#s1Buttons {
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(450%);
+    transform: translate(450%);
+}
+.central {
+    text-align: center;
+}
+
+p, h2 {
+    color: white;
+}
+
+.img50 {
+    width: 50%;
+}
+
+.img25 {
+    width: 25%;
+}
+
+.img15 {
+    width: 15%;
+}
+
+.img1 {
+    width: 1%;
+}
+
+.img100 {
+    width: 50%;
+}
+
+
+
+
+#miniBackground {
+    background-image: url(./imgs/da-hero-medium-merch.jpg);
+    width: 200%;
+}
