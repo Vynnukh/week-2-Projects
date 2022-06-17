@@ -12,126 +12,316 @@
 <body id="primaryBackground">
     <nav id="navBar">
         <div id="navIcons">
-       <img class="img1" src="./imgs/profile_icon_grey.png" alt="Profile Icon">
-        <img class="img1" src="./imgs/question_mark_logo.png" alt="Question Mark Icon">
-        <img class="img1" src="./imgs/ea_logo.png" alt="EA Logo">
-    </div>
-    </nav>
-    <nav id="navBar2">
-        <a href="index.html"><img src="./imgs/da-nav-logo-franchise-white.svg" alt="Dragon Age logo"></a>
-        <label for="games">Games</label>
-        <Input>list = "gameList"</Input>
-    
-    <datalist id="gameList">
-        <option value="Dragon Age: Origins"></option>
-        <option value="Dragon Age 2"></option>
-        <option value="Dragon Age Inquisition"></option>
-    </datalist>
-    <a href="PasteLinkHere">Dragon Age Day</a>
-    </nav>
-    <div id="s1Background">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div>
-        <h1 id="HmpgTitleLogo"><img class="img100" src="./imgs/da-nav-logo-franchise-white.svg" alt="Dragon Age Logo"></h1>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div id="s1ButtonsContainer">
-    <div id="s1Buttons">
-    <button>Watch the trailer</button>
-    <button>Get Updates</button>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-</div>
-</div>
-</div>
-    <br>
-    <br>
-    <br>
-    <div class="central">
-        <h2>Welcome to Dragon Age</h2>
-        <p>Enter Thedas, a vibrant world of rugged wilderness, treacherous labyrinths, and glittering cities. The Dragon Age is a time of warring nations, savage combat, and secret magics. Now, the fate of this world teeters on a knife's edge.</p>
-        <br>
-        <p>Thedas needs a new hero; one they'll never see coming. Forge a courageous fellowship to challenge the gathering storm. Friendship, drama, and romance abound as you bring striking individuals together into an extraordinary team. Become the hero and light the beacon of hope in their darkest moments</p>
-        <br>
-        <p>_______________________</p>
-    </div>
-    <br>
-    <div>
-        <h2>Discover More From the Next Dragon Age Game</h2>
-        <br>
-        <div>
-        <img class="img50" src="./imgs/dragon_age_background.jpg" alt="Video Button">
-    </div>
-        <br>
-        <div>
-            <img src="./imgs/twitter_icon.png" alt="Twitter Logo">
-            <img src="./imgs/facebook_icon.png" alt="Facebook Logo">
-            <img class="img15" src="./imgs/instagram-icon.jpg" alt="Instagram Logo">
-            <img class="img25" src="./imgs/YouTube-Icon-White.svg" alt="You Tube Logo">
+            <img class="img1" src="./imgs/profile_icon_grey.png" alt="Profile Icon">
+            <img class="img1" src="./imgs/question_mark_logo.png" alt="Question Mark Icon">
+            <img class="img1" src="./imgs/ea_logo.png" alt="EA Logo">
         </div>
+
+        <!-- ^ Note: This navBar is supposed to be displayed at the top then disapeer as the user scrolls down the page (Requires further research) -->
+    </nav>
+    <nav class="navBar2">
+        <ul>
+            <div class="logoLink">
+        <li><a href="index.html"><img class="img25" src="./imgs/dragon_age-logo.png" alt="Dragon Age logo"></a></li>
+    </div>
+</ul>
+    <ul class="navBar2List">
+        <li>
+            <div class="dropdown1G">
+            <button class="drpdwnBtn1G">Games
+            </button>
+            <div class="drpdwn1GCntnt">
+                <a href="https://www.ea.com/games/dragon-age/dragon-age-origins">Dragon Age: Origins</a>
+                <a href="https://www.ea.com/games/dragon-age/dragon-age-2">Dragon Age 2</a>
+                <a href="https://www.ea.com/games/dragon-age/dragon-age-inquisition">Dragon Age: Inquisition</a>
+
+            </div>
+        </div></li>
+        <li><button class="dADBtn"><a href="https://www.ea.com/games/dragon-age/dragon-age-day">Dragon_Age_Day</a></button></li>
+        <li>
+            <div class="dropdown1B">
+                <button class="drpdwnBtn1B">BioWare
+                </button>
+                <div class="drpdwn1BCntnt">
+                    <a href="https://blog.bioware.com/">BioWare Blog</a>
+                    <a href="https://gear.bioware.com/">BioWare Gear Store</a>
+
+                </div>
+                
+            </div>
+        </li>
+        <li><button class="navBarButton">Get Updates</button></li>
+    </ul>
+    </nav>
+    <!-- ^ Note: This Second NavBar is supposed to display the entire list in a horizontal line from the left, however it does not (No idea why at this point) -->
+    <section class="s1Background">
+        <!-- ^ Note: Find a way to fix background images in CSS without distorting content that is displayed on them -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
         <div>
-            <h2 class="central">Explore Dragon Age Games</h2>
+            <h1 id="HmpgTitleLogo"><img class="img50" src="./imgs/dragon_age-logo.png"
+                    alt="Dragon Age Logo"></h1>
+                    <!-- ^ Note: This header image used to look a lot better, but since it's former was a SVG file it couldn't be used in Github, and this one is the only other image I could find online that best matches it. -->
+        </div>
+        <div id="s1ButtonsContainer">
+            <div class="central">
+                <button class="s1ButtonsStyle">Watch the trailer</button>
+                <button class="s1ButtonsStyle">Get Updates</button>
+            </div>
+            <!--^ Note: Must figure out a way of getting these animations to display properly (Also why some of my end </div> elements keep disapeering) -->
             <br>
-            <div>
-            <img src="./imgs/dragon_age_button_1.jpg" alt="Dragon Age: Origins Button">
-            <img src="./imgs/dragon_age_button_2.jpg" alt="Dragon Age 2 Button">
-            <img src="./imgs/dragon_age_button_3.jpg" alt="Dragon Age: Inquisition Button">
-        </div>
-
-        </div>
-
+        </div>    
+     </section>      
     </div>
-    <div id="miniBackground">
+    <br>
+    <br>
+    <br>
+    <section id="s2Background">
+        <div class="central">
+            <h2 class="large">Welcome to Dragon Age</h2>
+            <p class="largeP">Enter Thedas, a vibrant world of rugged wilderness, treacherous labyrinths, and glittering cities. The
+                Dragon
+                Age is a time of warring nations, savage combat, and secret magics. Now, the fate of this world teeters
+                on a
+                knife's edge.</p>
+            <br>
+            <p class="largeP">Thedas needs a new hero; one they'll never see coming. Forge a courageous fellowship to challenge the
+                gathering storm. Friendship, drama, and romance abound as you bring striking individuals together into
+                an
+                extraordinary team. Become the hero and light the beacon of hope in their darkest moments</p>
+            <br>
+            <p>_______________________</p>
+        </div>
+        <br>
+        <div>
+            <h2 class="central">Discover More From the Next Dragon Age Game</h2>
+            <br>
+            <div class="s2Poster">
+                    <img class="img75" src="./imgs/poster_B.png" alt="Dragon Age Teaser">
+            </div>
+            <!-- ^ Note: Research a way to get video/image slideshows on screen to replace this screenshot image at some point -->
+        </div>
+    </section>
+    <br>
+    <Section>
+    <div class="icons">
+        <img class="img5" src="./imgs/twitter_icon.png" alt="Twitter Logo">
+        <img class="img5" src="./imgs/facebook_icon.png" alt="Facebook Logo">
+        <img class="img5" src="./imgs/instagram-icon.jpg" alt="Instagram Logo">
+        <img class="img5" src="./imgs/you_tube_icon_white_backup.png" alt="You Tube Logo">
+    </Section>
+    </div>
+    <br>
+    <section>
+        <h2 class="central large">Explore Dragon Age Games</h2>
+        <br>
+        <div class="imgButtons">
+            <img class="img25" src="./imgs/dragon_age_button_1.jpg" alt="Dragon Age: Origins Button">
+            <img class="img25" src="./imgs/dragon_age_button_2.jpg" alt="Dragon Age 2 Button">
+            <img class="img25" src="./imgs/dragon_age_button_3.jpg" alt="Dragon Age: Inquisition Button">
+        </div>
+        <!-- ^ Note: Research a way to overlay text images over these buttons -->
+
+    </section>
+
+    </section>
+    <section id="miniBackground">
         <br>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
+
         <img src="./imgs/da-gear-store-banner-logo.png" alt="Dragon Age Gear Shop Logo">
         <p>Celebrate Dragon Age in style - get your merch at the BioWare Gear Store.</p>
-        <button>Shop Now</button>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <div id="shopButtonsContainer">
+        <button class="shopButtonStyle">Shop Now</button>
     </div>
-    <br>
-    <div>
-        
+        <br>
+        <br>
+
+    </section>
+    <section id="section3" class="section3C">
+
+        <div class="section3B">
+            <br>
+            <br>
+            <h2 class="section3Header">Stay up to date with Dragon Age™</h2>
+            <p class="largeP">Sign up today to receive the latest Dragon Age news, updates, and more by email.</p>
+        </div>
+        <div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="section3B">
+            <div>
+                <div>
+                    <br>
+                    <br>
+                    <br>
+                    <input type="email" placeholder="Email">
+                </div>
+                <br>
+                <input type="date" placeholder="Birthdate">
+                <input list="country" placeholder="Country">
+            </div>
+
+            <datalist id="country">
+                <option value="Argentina"></option>
+                <option value="Australia"></option>
+                <option value="Austria"></option>
+                <option value="Belgium"></option>
+                <option value="Brazil"></option>
+                <option value="Canada"></option>
+                <option value="Chile"></option>
+                <option value="China"></option>
+                <option value="Colombia"></option>
+                <option value="Czech Republic"></option>
+                <option value="Denmark"></option>
+                <option value="Finland"></option>
+                <option value="France"></option>
+                <option value="Germany"></option>
+                <option value="Greece"></option>
+                <option value="Hong Kong"></option>
+                <option value="Hungary"></option>
+                <option value="India"></option>
+                <option value="Ireland"></option>
+                <option value="Israel"></option>
+                <option value="Italy"></option>
+                <option value="Japan"></option>
+                <option value="Korea"></option>
+                <option value="Mexico"></option>
+                <option value="Netherlands"></option>
+                <option value="New Zealand"></option>
+                <option value="Norway"></option>
+                <option value="Poland"></option>
+                <option value="Portugal"></option>
+                <option value="Russia"></option>
+                <option value="Saudi Arabia"></option>
+                <option value="Singapore"></option>
+                <option value="Slovakia"></option>
+                <option value="South Africa"></option>
+                <option value="Spain"></option>
+                <option value="Sweden"></option>
+                <option value="Switzerland"></option>
+                <option value="Taiwan"></option>
+                <option value="Thailand"></option>
+                <option value="Turkey"></option>
+                <option value="Ukraine"></option>
+                <option value="United Arab Emirates"></option>
+                <option value="United Kingdom"></option>
+                <option value="United States"></option>
+            </datalist>
+            <div>
+                <br>
+                <input type="checkbox" id="unsubscribe">
+                <label for="unsubscribe">I can unsubscribe at any time by changing my <a class="linkColour"
+                        href="https://myaccount.ea.com/cp-ui/aboutme/index">email preferences</a>, contacting <a
+                        class="linkColour" href="https://privacyadmin.ea.com/">privacyadmin.ea.com</a>, or writing to
+                    Electronic Arts Inc., ATTN: Email Opt-Out, 209 Redwood Shores pkwy, Redwood City, CA, 94065,
+                    USA.</label>
+            </div>
+            <br>
+            <div>
+                <button class="s1ButtonsStyle">Sign Up</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ^ Note: Research a way to form columns more evenly in this section -->
+    <section class="s4Background">
+
+        <div class="s4Header">
+            <div>
+
+            <h3>Dragon Age</h3>
+            <br>
+            <br>
+            <div class="s4Links">
+                <a class="linkColour2" href="https://www.ea.com/games/dragon-age/dragon-age-origins">Dragon Age:
+                    Origins</a>
+                <a class="linkColour2" href="https://www.ea.com/games/dragon-age/dragon-age-2">Dragon Age 2</a>
+                <a class="linkColour2" href="https://www.ea.com/games/dragon-age/dragon-age-inquisition">Dragon Age:
+                    Inquisition</a>
+                <a class="linkColour2" href="https://www.ea.com/games/dragon-age#newsletter">Newsletter</a>
+            </div>
+            </div>
+            <div class="s4RightHeader">
+                <h3 class="right">Join The Conversation</h3>
+            
+                <div class="s4Icons">
+                <img class="img2" src="./imgs/facebook_icon.png" alt="Facebook Logo">
+                <img class="img2" src="./imgs/twitter_icon.png" alt="Twitter Logo">
+                <img class="img2" src="./imgs/you_tube_icon_white_backup.png" alt="You Tube Logo">
+                <img class="img2" src="./imgs/instagram-icon.jpg" alt="Instagram Logo">
+            </div>
+    </section>
+</div>
+        </div>
+        <p class="central">__________________________________________________________________________________________________________________________</p>
+        <div class="s4Imgs">
+            <img src="./imgs/bioware-new-logo-white.png" alt="Bioware Logo">
+            <img src="./imgs/da-hub-esrb.png" alt="ERSB">
+        </div>
+    </section>
+    <footer class="section5Background">
+        <div class="imgButtons">
+        <div>
+            <img class="img5" src="./imgs/october-ea-ring.png" alt="EA Logo Red">
+        </div>
+        <div>
+            <a class="s5LinkColour" href="https://www.ea.com/games/library">Game Library</a>
+            <a class="s5LinkColour" href="https://www.ea.com/subscribe">Subscribe</a>
+            <a class="s5LinkColour" href="https://www.ea.com/redeem">Redeem Code</a>
+            <a class="s5LinkColour" href="https://www.origin.com/">Origin</a>
+            <a class="s5LinkColour" href="https://www.ea.com/about">About</a>
+            <a class="s5LinkColour" href="https://www.ea.com/able">Accessibility</a>
+            <a class="s5LinkColour" href="https://help.ea.com/">Help</a>
+        </div>
     </div>
+        <div class="footerLists">
+            <ul>
+                <li><a class="s5LinkColour" href="http://www.ea.com/legal">Legal & Privacy</a></li>
+                <li><a class="s5LinkColour" href="https://www.ea.com/service-updates">Online Service Updates</a></li>
+                <li>Cookie Preferences</li>
+            </ul>
+
+            <ul>
+                <li><a class="s5LinkColour" href="https://www.ea.com/terms-of-service">User Agreement</a></li>
+                <li><a class="s5LinkColour" href="https://www.ea.com/security">Security</a></li>
+            </ul>
+
+            <ul>
+                <li><a class="s5LinkColour" href="https://www.ea.com/legal/privacy-and-cookie-policy">Privacy & Cookie Policy (Your Privacy Rights)</a></li>
+                <li><a class="s5LinkColour" href="https://www.youtube.com/t/terms">You Tube Terms of Service</a></li>
+                <li><a class="s5LinkColour" href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div>
+            <p>© 2022 Electronic Arts Inc.</p>
+            <div class="trusteImg">
+            <img class="img15" src="./imgs/seal_privacy.png" alt="Truste Verified Privacy Powered by TrustArc">
+        </div>
+        </div>
+    </footer>
 </body>
 
 </html>

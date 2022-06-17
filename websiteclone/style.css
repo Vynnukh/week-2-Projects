@@ -1,60 +1,286 @@
 body {
     margin: 0px;
 }
+
 #navBar {
     background-color: black;
-    height: auto;
-    width: auto;
-    
+    height: 10px;
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    position: fixed;
+    top: 0;
+
+
 }
+
 #navIcons {
     display: flex;
     justify-content: flex-end;
 }
-#navBar2 {
+
+.navBar2 {
     background-color: black;
-    height: auto;
-    width: auto;
+    height: 100px;
+    width: 100%;
+    top: 5;
+    z-index: 1;
     display: flex;
+    flex-direction: row;
+    justify-content: left;
+    
+
 }
-#navBar2 a {
+
+.navBar2 a {
     color: white;
 }
-#primaryBackground {
-    background-image: url(./imgs/da-section-bg-map-texture.jpg);
+
+.navBar2 a:hover {
+    color: rgba(255, 166, 0, 0.752);
 }
-#s1Background {
+
+ul.navBar2List {
+    padding-left: 0px;
+    background-color: black;
+}
+
+.navBar2List {
+    display: flex;
+    justify-content: left;
+
+}
+
+ul.navBar2List>li {
+    display: inline;
+}
+
+.logoLink {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 0px;
+}
+
+.dropdown1G {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown1G a:hover {
+    color: rgba(255, 166, 0, 0.752);
+}
+
+.dropdown1G .drpdwnBtn1G {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: black;
+    font-family: inherit;
+    margin: 0;
+}
+
+.drpdwn1GCntnt {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 2);
+    z-index: 1;
+}
+
+.drpdwn1GCntnt a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown1G:hover .drpdwn1GCntnt {
+    display: block;
+    color: rgba(255, 166, 0, 0.575);
+}
+
+.dADBtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: black;
+    font-family: inherit;
+    margin: 0;
+    text-align: center;
+    display: inline-block;
+
+
+}
+
+.dropdown1B {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown1B .drpdwnBtn1B {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: black;
+    font-family: inherit;
+    margin: 0;
+    display: inline-block;
+}
+
+.drpdwn1BCntnt {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 2);
+    z-index: 1;
+}
+
+.drpdwn1BCntnt a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown1B:hover .drpdwn1BCntnt {
+    display: block;
+}
+
+.navBarButton {
+    background-color: rgba(249, 183, 60, 0.84);
+    color: white;
+    border: none;
+    padding: 0px 25px;
+    size: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#primaryBackground {
+    background-color: rgb(2, 2, 2);
+}
+
+.s1Background {
     background-image: url(./imgs/dragon_age_background.jpg);
-    width: 175%;
-    height: 200%;
-    
-    
+    /* position: fixed; */
+    display: block;
+    flex-basis: 100%;
+    background-size: 100%;
+    padding: 0px;
 }
 
 #HmpgTitleLogo {
     display: flex;
     justify-content: center;
-    
+
 }
+
 #s1ButtonsContainer {
-    height: 200px;
+    height: 150px;
     position: relative;
-    border: 3px solid white;
 }
 
 #s1Buttons {
     margin: 0px;
     position: absolute;
-    top: 50%;
-    -ms-transform: translate(450%);
-    transform: translate(450%);
+    top: 0%;
+    -ms-transform: translate(250%);
+    transform: translate(250%);
+
 }
+
+.s1ButtonsStyle {
+    background-color: rgba(249, 183, 60, 0.84);
+    cursor: pointer;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 15px 32px;
+    size: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+    z-index: 0;
+
+}
+
+.s1ButtonsStyle::before {
+    background-color: rgba(249, 183, 60, 0.84);
+    size: 100px;
+    position: relative;
+    z-index: -1;
+    animation: s1BSMove;
+    transition: 00.5s;
+}
+
+@keyframes s1BSMove {
+    0% {
+        size: 100px;
+    }
+
+    100% {
+        size: 200px;
+    }
+
+}
+
+.s1ButtonsStyle:hover {
+    transform: scale(200px);
+    background-color: rgba(249, 183, 60, 0.84);
+}
+
+
+#s2Background {
+    background-image: url(./imgs/da-section-bg-map-texture.jpg);
+    background-size: 100%;
+    padding: 25px;
+    padding-top: 0px;
+}
+
+.s2Poster {
+    display: flex;
+    justify-content: center;
+}
+
 .central {
     text-align: center;
 }
 
-p, h2 {
+p,
+h2,
+label,
+h3 {
     color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.large {
+    font-size: 38px;
+}
+
+.largeP {
+    font-size: 26px;
+}
+
+.img75 {
+    width: 75%;
 }
 
 .img50 {
@@ -65,22 +291,171 @@ p, h2 {
     width: 25%;
 }
 
-.img15 {
-    width: 15%;
+.img5 {
+    width: 5%;
 }
 
 .img1 {
     width: 1%;
 }
 
-.img100 {
-    width: 50%;
+.img2 {
+    width: 2%;
 }
 
+.img15 {
+    width: 15%;
+    padding: 100px;
+}
 
+.linkColour {
+    color: rgba(255, 166, 0, 0.599);
+}
 
+.linkColour2 {
+    color: white;
+}
+
+.right {
+    text-align: right;
+}
+
+.videoImg {
+    display: flex;
+    justify-content: center;
+}
+
+.videoImgImg {
+    background-image: url(./imgs/poster.jpg);
+    background-size: 100%;
+}
+
+.icons {
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.imgButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 200px;
+}
 
 #miniBackground {
     background-image: url(./imgs/da-hero-medium-merch.jpg);
-    width: 200%;
+    background-size: 100%;
+    display: block;
+}
+
+
+#shopButtonsContainer {
+    height: 50px;
+    width: 500px;
+    position: relative;
+}
+
+#shopButtons {
+    margin: 0px;
+    position: absolute;
+    top: 0%;
+    -ms-transform: translate(200%);
+    transform: translate(200%);
+}
+
+.shopButtonStyle {
+    background-color: transparent;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-color: white;
+    border: 5px;
+    border-radius: 5px;
+    border-style: ridge;
+}
+
+#section3 {
+    background-image: url(./imgs/section3_background.jpg);
+    background-size: 100%;
+    padding: 25px;
+    padding-top: 0px;
+    display: flex;
+
+}
+
+.section3B {
+    display: flex;
+    flex-direction: column;
+}
+
+.section3C {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section3Header {
+    font-size: 50px;
+}
+
+.s4Background {
+    background-color: rgb(23, 24, 22);
+    padding: 25px;
+}
+
+.s4Header {
+    display: flex;
+
+}
+
+.s4RightHeader {
+    display: flex;
+    flex-direction: column;
+}
+
+.s4Left {
+    display: flex;
+    flex-direction: column;
+}
+
+.s4Links {
+    display: inline-block;
+
+}
+
+.s4Links a:hover {
+    color: rgba(255, 166, 0, 0.752)
+}
+
+.s4Icons {
+    display: flex;
+    justify-content: right;
+}
+
+.s4Imgs {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 60px 60px 60px;
+}
+
+.section5Background {
+    background-color: white;
+    padding: 25px;
+}
+
+.s5LinkColour {
+    color: black;
+}
+
+.footerLists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.trusteImg {
+    display: flex;
+    justify-content: right;
 }
